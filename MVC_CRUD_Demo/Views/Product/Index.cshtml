@@ -1,0 +1,71 @@
+@model IEnumerable<MVC_CRUD_Demo.Models.Product>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { ID=item.ProdId }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.ProdId }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

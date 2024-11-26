@@ -247,3 +247,4 @@ D:\MVC_New\MVC_CRUD_Demo\obj\Debug\net5.0\refint\MVC_CRUD_Demo.dll
 D:\MVC_New\MVC_CRUD_Demo\obj\Debug\net5.0\MVC_CRUD_Demo.pdb
 D:\MVC_New\MVC_CRUD_Demo\obj\Debug\net5.0\MVC_CRUD_Demo.genruntimeconfig.cache
 D:\MVC_New\MVC_CRUD_Demo\obj\Debug\net5.0\ref\MVC_CRUD_Demo.dll
+D:\MVC_New\MVC_CRUD_Demo\obj\Debug\net5.0\MVC_CRUD_Demo.sourcelink.json

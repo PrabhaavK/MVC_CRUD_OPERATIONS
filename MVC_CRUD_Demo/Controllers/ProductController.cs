@@ -42,5 +42,24 @@ namespace MVC_CRUD_Demo.Controllers
             var product = ProductService.GetProductById(id);
             return View(product);
         }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var data = ProductService.GetProductById(id);
+            return View(products);
+        }
+        [HttpPost]
+        public IActionResult Delete(int id, Product products)
+        {
+            var data = ProductService.GetProductById(id);
+            if (data == null)
+            {
+                return View();
+            }else
+            {
+                productService.DeleteProduct(data);
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
